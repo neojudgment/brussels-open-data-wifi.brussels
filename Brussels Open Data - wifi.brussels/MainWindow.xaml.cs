@@ -60,7 +60,7 @@ namespace OpenData
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     ///
-    [Guid("204A7213-7D92-4542-805C-EE25816C4073")]
+    [Guid("44C28944-AFFA-443B-978E-226C874570CE")]
     public partial class MainWindow
     {
         #region Variables
