@@ -1,0 +1,536 @@
+﻿<metro:Window x:Class="OpenData.Option"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:metro="clr-namespace:Elysium.Theme.Controls;assembly=Elysium.Theme"
+              Title=""
+              Width="800"
+              Height="480"
+              MinWidth="800"
+              MinHeight="480"
+              MaxWidth="800"
+              MaxHeight="480"
+              IsHitTestVisible="True"
+              ResizeMode="NoResize"
+              StateChanged="WindowStateChanged"
+              Loaded="Option_Loaded"
+              TextOptions.TextFormattingMode="Display"
+              TextOptions.TextRenderingMode="ClearType"
+              WindowStartupLocation="Manual">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/test.png"
+                        Opacity="0.2"
+                        Stretch="None" />
+        </Grid.Background>
+        <Canvas x:Name="CanvasBorder"
+                Width="8"
+                Height="37"
+                Margin="0,11,786,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="#FF1BA1E2" />
+
+        <Label Width="94"
+               Height="42"
+               Margin="24,6,0,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Content="settings"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="24"
+               FontWeight="Light" />
+
+        <Label x:Name="LabelSoftwareUpdate"
+               Width="151"
+               Height="29"
+               Margin="153,32,0,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Content="Software updates"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="14"
+               FontWeight="SemiBold" />
+
+        <Button x:Name="ButtonSoftwareUpdate"
+                Width="228"
+                Height="26"
+                Margin="158,88,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Click="ButtonSoftwareUpdate_Click"
+                Content="CHECK FOR UPDATE NOW"
+                FontFamily="./resources/#Segoe WP"
+                FontSize="11"
+                FontWeight="Bold"
+                Foreground="Black"
+                OverridesDefaultStyle="True"
+                Padding="1">
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border_update"
+                            Background="#FFF7F7F7"
+                            BorderBrush="#FFCCCCCC"
+                            BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFE0E0E0" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFD8D8D9" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="ButtonSaveChanges"
+                Width="146"
+                Height="25"
+                Margin="175,372,437,24"
+                HorizontalAlignment="center"
+                Click="ButtonSaveChanges_Click"
+                Content="SAVE CHANGES"
+                FontFamily="./resources/#Segoe WP"
+                FontSize="11"
+                FontWeight="Bold"
+                Foreground="Black"
+                Padding="1">
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border_update"
+                            Background="#FFF7F7F7"
+                            BorderBrush="#FFCCCCCC"
+                            BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFE0E0E0" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFD8D8D9" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="ButtonCancelChanges"
+                Width="105"
+                Height="25"
+                Margin="506,372,148,24"
+                HorizontalAlignment="center"
+                Click="ButtonCancelChanges_Click"
+                Content="CANCEL"
+                FontFamily="./resources/#Segoe WP"
+                FontSize="11"
+                FontWeight="Bold"
+                Foreground="Black"
+                Padding="1">
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border_update"
+                            Background="#FFF7F7F7"
+                            BorderBrush="#FFCCCCCC"
+                            BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFE0E0E0" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFD8D8D9" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Label x:Name="LabelProxyAdress"
+               Width="104"
+               Height="27"
+               Margin="153,263,0,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               HorizontalContentAlignment="Left"
+               Content="Proxy address"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="13"
+               FontWeight="SemiBold" />
+
+        <TextBox x:Name="TextBoxProxyPort"
+                 Width="223"
+                 Height="25"
+                 Margin="0,289,88,0"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 VerticalContentAlignment="Center"
+                 Background="#FFEEEEEE"
+                 BorderThickness="0"
+                 FontFamily="./resources/#Segoe WP"
+                 FontSize="13"
+                 FontWeight="Normal"
+                 TextAlignment="Left" />
+
+        <Label x:Name="LabelProxyPort"
+               Width="104"
+               Height="27"
+               Margin="0,263,212,0"
+               HorizontalAlignment="right"
+               VerticalAlignment="Top"
+               HorizontalContentAlignment="Left"
+               Content="Proxy port"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="13"
+               FontWeight="SemiBold" />
+
+        <TextBox x:Name="TextBoxUsername"
+                 Height="25"
+                 Margin="158,342,377,0"
+                 VerticalAlignment="Top"
+                 VerticalContentAlignment="Center"
+                 Background="#FFEEEEEE"
+                 BorderThickness="0"
+                 FontFamily="./resources/#Segoe WP"
+                 FontSize="13"
+                 FontWeight="Normal"
+                 Text=""
+                 TextAlignment="Left" />
+
+        <Label x:Name="LabelProxyUsername"
+               Width="113"
+               Height="27"
+               Margin="153,315,0,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               HorizontalContentAlignment="Left"
+               Content="Proxy username"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="13"
+               FontWeight="SemiBold" />
+
+        <PasswordBox x:Name="PasswordBox"
+                     Width="223"
+                     Height="25"
+                     Margin="0,342,88,0"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Top"
+                     VerticalContentAlignment="Center"
+                     Background="#FFEEEEEE"
+                     BorderThickness="0"
+                     FontFamily="./resources/#Segoe WP"
+                     FontSize="13"
+                     FontWeight="Normal" />
+
+        <Label x:Name="LabelProxyPassword"
+               Width="118"
+               Height="27"
+               Margin="0,315,198,0"
+               HorizontalAlignment="right"
+               VerticalAlignment="Top"
+               HorizontalContentAlignment="Left"
+               Content="Proxy password"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="13"
+               FontWeight="SemiBold" />
+
+        <TextBox x:Name="TextBoxProxyAdress"
+                 Height="25"
+                 Margin="158,289,377,0"
+                 VerticalAlignment="Top"
+                 VerticalContentAlignment="Center"
+                 Background="#FFEEEEEE"
+                 BorderThickness="0"
+                 FontFamily="./resources/#Segoe WP"
+                 FontSize="13"
+                 FontWeight="Normal"
+                 TextAlignment="Left" />
+
+        <CheckBox Name="CheckBoxUpdates"
+                  Width="221"
+                  Height="23"
+                  Margin="156,63,0,0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  VerticalContentAlignment="Top"
+                  Content="Automatically check for updates"
+                  FontFamily="./resources/#Segoe WP"
+                  FontSize="13"
+                  IsChecked="True" />
+
+        <Label Name="LabelOptions"
+               Width="245"
+               Height="29"
+               Margin="153,174,0,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Content="Connection options / miscellaneous"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="14"
+               FontWeight="SemiBold" />
+
+        <CheckBox Name="CheckBoxProxyAuthentication"
+                  Width="183"
+                  Height="23"
+                  Margin="156,239,0,0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Content="Use proxy authentication"
+                  FontFamily="./resources/#Segoe WP"
+                  FontSize="13" />
+
+        <Label Name="Label1"
+               Width="271"
+               Height="29"
+               Margin="0,32,46,0"
+               HorizontalAlignment="right"
+               VerticalAlignment="Top"
+               Background="White"
+               Content="GPS hardware options &amp; Maps options"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="14"
+               FontWeight="SemiBold"
+               ForceCursor="False" />
+
+        <CheckBox Name="CheckBoxGpsHardware"
+                  Width="301"
+                  Height="23"
+                  Margin="0,63,12,0"
+                  HorizontalAlignment="right"
+                  VerticalAlignment="Top"
+                  Content="Use GPS hardware (NMEA GPGGA)"
+                  FontFamily="./resources/#Segoe WP"
+                  FontSize="13" />
+
+        <ComboBox Name="ComboBoxComPort"
+                  Width="160"
+                  Height="26"
+                  Margin="0,88,70,0"
+                  HorizontalAlignment="right"
+                  VerticalAlignment="Top"
+                  VerticalContentAlignment="Center"
+                  FontFamily="./resources/#Segoe WP"
+                  FontSize="11" />
+
+        <ComboBox Name="ComboBoxSpeed"
+                  Width="160"
+                  Height="26"
+                  Margin="0,124,70,0"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Top"
+                  VerticalContentAlignment="Center"
+                  FontFamily="./resources/#Segoe WP"
+                  FontSize="11">
+
+            <ComboBox.Items>
+                <ComboBoxItem Content="1200" />
+                <ComboBoxItem Content="2400" />
+                <ComboBoxItem Content="4800" />
+                <ComboBoxItem Content="9600" />
+                <ComboBoxItem Content="14400" />
+                <ComboBoxItem Content="19200" />
+                <ComboBoxItem Content="38400" />
+                <ComboBoxItem Content="57600" />
+            </ComboBox.Items>
+        </ComboBox>
+
+        <Label Name="LabelComPort"
+               Width="79"
+               Height="26"
+               Margin="0,89,239,0"
+               HorizontalAlignment="right"
+               VerticalAlignment="Top"
+               VerticalContentAlignment="Top"
+               Content="ComPort:"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="13" />
+
+        <Label Name="LabelComSpeed"
+               Width="78"
+               Height="26"
+               Margin="0,124,240,0"
+               HorizontalAlignment="right"
+               VerticalAlignment="Top"
+               Content="ComSpeed:"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="13" />
+
+        <Button Name="ButtonHardwareDetect"
+                Width="146"
+                Height="25"
+                Margin="339,372,273,24"
+                HorizontalAlignment="Center"
+                Click="ButtonHardwareDetect_Click"
+                Content="AUTO DETECT"
+                FontFamily="./resources/#Segoe WP"
+                FontSize="11"
+                FontWeight="Bold"
+                ForceCursor="True"
+                Foreground="Black"
+                Padding="1">
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border_update"
+                            Background="#FFF7F7F7"
+                            BorderBrush="#FFCCCCCC"
+                            BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFE0E0E0" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFD8D8D9" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <ComboBox x:Name="ComboBoxAccuracy"
+                  Width="160"
+                  Height="26"
+                  Margin="0,161,70,0"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Top"
+                  VerticalContentAlignment="Center"
+                  FontFamily="./resources/#Segoe WP"
+                  FontSize="11">
+
+            <ComboBoxItem Content="Offline (default)" />
+            <ComboBoxItem Content="Online" />
+        </ComboBox>
+
+        <Label x:Name="LabelAccuracy"
+               Width="78"
+               Height="26"
+               Margin="0,161,240,0"
+               HorizontalAlignment="right"
+               VerticalAlignment="Top"
+               Content="Accuracy:"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="13" />
+
+        <Button x:Name="ButtonOptimizationCache"
+                Width="228"
+                Height="26"
+                Margin="158,143,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Click="ButtonOptimizationCache_Click"
+                Content="CACHE OPTIMIZATION"
+                FontFamily="./resources/#Segoe WP"
+                FontSize="11"
+                FontWeight="Bold"
+                Foreground="Black"
+                OverridesDefaultStyle="True"
+                Padding="1">
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border_update"
+                            Background="#FFF7F7F7"
+                            BorderBrush="#FFCCCCCC"
+                            BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFE0E0E0" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border_update" Property="Background" Value="#FFD8D8D9" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label x:Name="LabelDeleteCache"
+               Width="151"
+               Height="25"
+               Margin="153,116,0,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Content="Maps cache"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="14"
+               FontWeight="SemiBold" />
+
+        <ComboBox x:Name="ComboBoxMap"
+                  Width="160"
+                  Height="26"
+                  Margin="0,199,70,0"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Top"
+                  VerticalContentAlignment="Center"
+                  FontFamily="./resources/#Segoe WP"
+                  FontSize="11">
+
+            <ComboBoxItem Content="Bing Maps" />
+            <ComboBoxItem Content="Google Maps" />
+            <ComboBoxItem Content="Nokia Maps" />
+            <ComboBoxItem Content="OpenStreetMap" />
+        </ComboBox>
+        <Label x:Name="LabelMap"
+               Width="83"
+               Height="26"
+               Margin="0,199,235,0"
+               HorizontalAlignment="right"
+               VerticalAlignment="Top"
+               Content="Maps:"
+               FontFamily="./resources/#Segoe WP"
+               FontSize="13" />
+
+        <CheckBox x:Name="CheckBoxShowTiles"
+            Content="Show tiles"
+            HorizontalAlignment="Left"
+            Height="23"
+            Margin="302,209,0,0"
+            VerticalAlignment="Top"
+            Width="89"
+            FontFamily="./resources/#Segoe WP"
+            FontSize="14" />
+
+        <ComboBox x:Name="ComboBoxRouteColor"
+            Width="160"
+            Height="26"
+            Margin="0,234,70,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            MaxDropDownHeight="120"
+            VerticalContentAlignment="Center"
+            FontFamily="./resources/#Segoe WP"
+            FontSize="11">
+        </ComboBox>
+        <Label x:Name="LabelRoute"
+            Width="83"
+            Height="26"
+            Margin="0,234,235,0"
+            HorizontalAlignment="right"
+            VerticalAlignment="Top"
+            Content="Route color:"
+            FontFamily="./resources/#Segoe WP"
+            FontSize="13" />
+
+        <CheckBox x:Name="CheckBoxRoute"
+            Width="110"
+            Height="23"
+            Margin="156,209,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Show Route"
+            FontFamily="./resources/#Segoe WP"
+            FontSize="13" />
+    </Grid>
+</metro:Window>
