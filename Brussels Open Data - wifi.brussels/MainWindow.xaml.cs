@@ -390,21 +390,33 @@ namespace OpenData
 
                 do
                 {
-                    if (!string.IsNullOrEmpty(ab.Features[i].Geometry.Coordinates[0].ToString(CultureInfo.InvariantCulture)))
+                    try
                     {
-                        Coordinates0 = ab.Features[i].Geometry.Coordinates[0].ToString(CultureInfo.InvariantCulture);
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                        if (!string.IsNullOrEmpty(ab.Features[i].Geometry.Coordinates[0].ToString(CultureInfo.InvariantCulture)))
+                        {
+                            Coordinates0 = ab.Features[i].Geometry.Coordinates[0].ToString(CultureInfo.InvariantCulture);
+                        }
+                        else
+                        {
+                            i += 1;
+                            continue;
+                        }
 
-                    if (!string.IsNullOrEmpty(ab.Features[i].Geometry.Coordinates[1].ToString(CultureInfo.InvariantCulture)))
-                    {
-                        Coordinates1 = ab.Features[i].Geometry.Coordinates[1].ToString(CultureInfo.InvariantCulture);
+                        if (!string.IsNullOrEmpty(ab.Features[i].Geometry.Coordinates[1].ToString(CultureInfo.InvariantCulture)))
+                        {
+                            Coordinates1 = ab.Features[i].Geometry.Coordinates[1].ToString(CultureInfo.InvariantCulture);
+                        }
+                        else
+                        {
+                            i += 1;
+                            continue;
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
+                        Trace.WriteLine(DateTime.Now + " " + "Exception dans PopulateBingMap " + ex);
+                        Console.WriteLine(i);
+                        i += 1;
                         continue;
                     }
 
