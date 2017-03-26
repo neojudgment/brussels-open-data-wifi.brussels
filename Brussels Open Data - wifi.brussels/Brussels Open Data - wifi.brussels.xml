@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>brussels open data - wifi.brussels</name>
+        <name>wifi.brussels</name>
     </assembly>
     <members>
         <member name="T:OpenData.Message">
@@ -71,143 +71,143 @@
         </member>
         <member name="T:OpenData.Properties.Resources">
             <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.ResourceManager">
             <summary>
-              Returns the cached ResourceManager instance used by this class.
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.Culture">
             <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources._default">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.batteryhigh">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.batterylow">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.black">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.close">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.close_hover">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.downloadactive">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.flag_export">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.infoactive">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.mapshigh">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.max">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.max_hover">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.min">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.min_hover">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.minusactive">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.plusactive">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.refresh">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.SegoeWP">
             <summary>
-              Looks up a localized resource of type System.Byte[].
+              Recherche une ressource localisée de type System.Byte[].
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.settingsactive">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.test">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="P:OpenData.Properties.Resources.wi_fi_2">
+        <member name="P:OpenData.Properties.Resources.wifi2">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="P:OpenData.Properties.Resources.wi_fi_3">
+        <member name="P:OpenData.Properties.Resources.wifi3">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="P:OpenData.Properties.Resources.wi_fi_6">
+        <member name="P:OpenData.Properties.Resources.wifi6">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.wifiactive">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:OpenData.Properties.Resources.wifiinactive">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Recherche une ressource localisée de type System.Drawing.Bitmap.
             </summary>
         </member>
     </members>

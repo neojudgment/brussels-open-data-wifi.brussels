@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OpenData</RootNamespace>
-    <AssemblyName>brussels open data - wifi.brussels</AssemblyName>
+    <AssemblyName>wifi.brussels</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -62,7 +62,7 @@
     <OptionInfer>Off</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Public-wifi-256.ico</ApplicationIcon>
+    <ApplicationIcon>wifi.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
@@ -79,6 +79,7 @@
     <NoWarn>1591</NoWarn>
     <Optimize>false</Optimize>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <DefineConstants>TRACE</DefineConstants>
@@ -239,6 +240,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Resource Include="fonts\SegoeWP.ttf" />
     <None Include="packages.config" />
@@ -324,22 +326,22 @@
     <Resource Include="Resources\test.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\wi-fi-2.png" />
+    <Resource Include="Resources\wifi2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\wi-fi-3.png" />
+    <Resource Include="Resources\wifi3.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\flag-export.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\wi-fi-6.png" />
+    <Resource Include="Resources\wifi6.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\default.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Public-wifi-256.ico" />
+    <Resource Include="wifi.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net46\System.Data.SQLite.Core.targets')" />

@@ -76,8 +76,8 @@ namespace OpenData
         public static bool ShowTiles;
         public string Coordinates0;
         public string Coordinates1;
-        private const double BxlLatitude = 50.844;
-        private const double BxlLongitude = 4.360;
+        private const double BxlLatitude = 50.848608517192694;
+        private const double BxlLongitude = 4.3497339856471289;
         private const int ScMove = 0xF010;
         private const int WmSyscommand = 0x112;
         private static bool _InternetscanState;
@@ -415,21 +415,21 @@ namespace OpenData
                     {
                         if (_mytag == 0)
                         {
-                            _mytag = 26;
+                            _mytag = 2;
                         }
 
                         if (_mytag == i)
                         {
-                            myIcon = new BitmapImage(new Uri("Resources\\wi-fi-6.png", UriKind.Relative));
+                            myIcon = new BitmapImage(new Uri("Resources\\wifi6.png", UriKind.Relative));
                         }
                         else
                         {
-                            myIcon = new BitmapImage(new Uri("Resources\\wi-fi-2.png", UriKind.Relative));
+                            myIcon = new BitmapImage(new Uri("Resources\\wifi2.png", UriKind.Relative));
                         }
                     }
                     else
                     {
-                        myIcon = new BitmapImage(new Uri("Resources\\wi-fi-3.png", UriKind.Relative));
+                        myIcon = new BitmapImage(new Uri("Resources\\wifi3.png", UriKind.Relative));
                     }
 
                     marker.Shape = new Image
@@ -518,7 +518,7 @@ namespace OpenData
                 {
                     if (_firststart)
                     {
-                        tag = 26;
+                        tag = 2;
                         _firststart = false;
                     }
                     else
