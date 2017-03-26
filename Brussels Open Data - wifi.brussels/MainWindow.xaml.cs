@@ -836,7 +836,7 @@ namespace OpenData
             {
                 // C'est un refresh. On déplace la carte (pas besoin de request).
                 MainMap.Position = new PointLatLng(BxlLatitude, BxlLongitude);
-                MainMap.Zoom = 12;
+                MainMap.Zoom = 13;
                 Trace.WriteLine(DateTime.Now + " " + "Déplacement de la carte après un refresh (pas de request)");
 
                 LinearProgressBar.Visibility = Visibility.Hidden;
