@@ -21,4 +21,4 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 All trademarks and registered trademarks are the property of their respective owners.
 
-Copyright © [Pascal Hubert](mailto:pascal.hubert@outlook.com) - Brussels, Belgium 2017.
+Copyright © [Pascal Hubert](mailto:pascal.hubert@outlook.com) - Brussels, Belgium 2022.
