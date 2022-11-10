@@ -14,6 +14,8 @@ brussels open data - wifi.brussels uses [Microsoft Windows API Code Pack](http:/
 
 brussels open data - wifi.brussels uses [Elysium library](http://elysium.asvishnyakov.com/en/) that implements Modern UI for Windows Presentation Foundation.
 
+wifi.brussels is developed on Visual Studio 2022 in C# 7.2 under Windows 11 Professional 64 bit. The Framework v4.8 is required.
+
 This program is under [Microsoft Reciprocal License (Ms-RL)](http://opensource.org/licenses/MS-RL/).
 
 This program is distributed in the hope that it will be useful but WITHOUT ANY WARRANTY; without even the implied warranty of
